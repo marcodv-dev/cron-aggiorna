@@ -2,7 +2,7 @@ name: Aggiorna Casella Giornaliera
 
 on:
   schedule:
-    - cron: '50 20 * * *'  # ogni giorno a mezzanotte UTC
+    - cron: '55 19 * * *'  # ogni giorno a mezzanotte UTC
   workflow_dispatch:       # permette di avviare manualmente il workflow
 
 jobs:
