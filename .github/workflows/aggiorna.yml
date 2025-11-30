@@ -1,14 +1,16 @@
-name: Aggiorna Casella Giornaliera
+name: Aggiorna Casella Giornaliera Temporaneo
 
 on:
   schedule:
-    - cron: '55 19 * * *'  # ogni giorno a mezzanotte UTC
-  workflow_dispatch:       # permette di avviare manualmente il workflow
+    - cron: '15 20 30 11 *'  # 30 novembre alle 20:15 UTC
+  workflow_dispatch:        # permette anche l'avvio manuale
 
 jobs:
   call_endpoint:
     runs-on: ubuntu-latest
     steps:
+      - name: Controlla orario esecuzione
+        run: date
       - name: Chiamata HTTP all'endpoint
         run: |
           curl -X GET https://calendariopubblicobackend.onrender.com/cron/aggiorna
