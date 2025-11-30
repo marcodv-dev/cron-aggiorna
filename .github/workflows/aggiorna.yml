@@ -2,7 +2,7 @@ name: Aggiorna Casella Giornaliera Temporaneo
 
 on:
   schedule:
-    - cron: '0 0 * * *'  # tutti i giorni a mzzanotte
+    - cron: '0 23 * * *'  # tutti i giorni a mzzanotte (roma + 1)
   workflow_dispatch:        # permette anche l'avvio manuale
 
 jobs:
